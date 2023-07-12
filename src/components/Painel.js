@@ -40,7 +40,7 @@ export default function Painel() {
         />
         <button type="submit">Cadastrar</button>
       </form>
-      <h3>Código do candidato: {codCandidato}</h3>
+      <h3>Código do candidato: {codCandidato?.data}</h3>
       <PainelBox>
         <h2>Acesse as etapas:</h2>
         <Link to={"/entrevista"}>
