@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Painel from "./components/Painel";
+import MarcarEntrevista from "./components/MarcarEntrevista";
+import AprovarCandidatos from "./components/AprovarCandidatos";
+import ListarCandidatos from "./components/ListarCandidatos";
+import Status from "./components/Status";
+import Desqualificar from "./components/Desqualificar";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={ <Painel /> } />
+        <Route path="/entrevista" element={ <MarcarEntrevista />} />
+        <Route path="/aprovar" element={ <AprovarCandidatos />} />
+        <Route path="/aprovados" element={ <ListarCandidatos />} />
+        <Route path="/status" element={ <Status />} />
+        <Route path="/desqualificar" element={ <Desqualificar />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
