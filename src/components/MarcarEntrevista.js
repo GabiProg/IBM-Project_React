@@ -3,7 +3,7 @@ import { useState } from "react";
 import axios from "axios";
 
 export default function MarcarEntrevista() {
-  const [codCandidato, setcodCandidato] = useState();
+  const [codCandidato, setCodCandidato] = useState();
 
   function Marcar(e) {
     e.preventDefault();
@@ -33,7 +33,7 @@ export default function MarcarEntrevista() {
           type="number" 
           placeholder="Código"
           value={codCandidato}
-          onChange={(e) => setcodCandidato(e.target.value)}
+          onChange={(e) => setCodCandidato(e.target.value)}
           required 
         />
         <button type="submit">Marcar</button>

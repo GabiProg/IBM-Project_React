@@ -5,7 +5,7 @@ import axios from "axios";
 
 export default function Painel() {
   const [nome, setNome] = useState();
-  const [codCandidato, setcodCandidato] = useState();
+  const [codCandidato, setCodCandidato] = useState();
 
   function Cadastrar(e) {
     e.preventDefault();
@@ -19,7 +19,7 @@ export default function Painel() {
     promise.then((response) => {
       const { data } = response;
         console.log(data);
-        setcodCandidato(data.id);
+        setCodCandidato(data.id);
         alert("Candidato cadastrado com sucesso.");
     });
     promise.catch((err) => {
